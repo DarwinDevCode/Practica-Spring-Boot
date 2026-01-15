@@ -19,16 +19,18 @@ public class PracticaProyectoFinalSpringbootApplication {
         SpringApplication.run(PracticaProyectoFinalSpringbootApplication.class, args);
 
         Rol rol = new Rol();
-        rol.setNombreRol("Docente");
-        rol.setNombreRol("Ayudante");
-        rol.setNombreRol("Coordinador");
+        rol.setIdRol(3);
         rol.setNombreRol("Decano");
-        rol.setNombreRol("Administrador");
+//        rol.setNombreRol("Ayudante");
+//        rol.setNombreRol("Coordinador");
+//        rol.setNombreRol("Decano");
+//        rol.setNombreRol("Administrador");
 //        System.out.println("Hola" + rol.toString());
         System.out.println(rol);
 
 
         Usuario usuario = new Usuario();
+        usuario.setIdUsuario(7);
         usuario.setCedula("1234567890");
         usuario.setNombres("Darwin Joel");
         usuario.setApellidos("Sanchez Vera");
@@ -56,7 +58,17 @@ public class PracticaProyectoFinalSpringbootApplication {
             }
         }
 
+        Facultad facultad = new Facultad();
+        facultad.setIdFacultad(6);
+        facultad.setIdUsuarioDecano(rol.getIdRol());
+        facultad.setNombreFacultad("Ciencias de la computacion");
+        System.out.println(facultad);
 
+
+        UsuarioRol usuarioRol = new UsuarioRol();
+        usuarioRol.setIdRol(rol.getIdRol());
+        usuarioRol.setIdUsuario(usuario.getIdUsuario());
+        usuarioRol.setIdFacultad(facultad.getIdFacultad());
+        System.out.println(usuarioRol.toString());
     }
-
 }

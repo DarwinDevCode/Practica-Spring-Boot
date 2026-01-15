@@ -5,6 +5,10 @@ import jakarta.validation.constraints.*;
 import java.time.LocalDate;
 
 public class Usuario {
+    @NotNull(message = "El ID de usuario es obligatorio")
+    @Positive(message = "El ID de usuario debe ser un número positivo")
+    @Column(nullable = false)
+    private Integer idUsuario;
 
     @NotBlank(message = "La cédula no puede estar vacía")
     @Size(max = 15, message = "La cédula no puede exceder los 15 caracteres")
@@ -63,6 +67,14 @@ public class Usuario {
         this.credencialUsuario = credencialUsuario;
         this.activo = activo;
         this.fechaCreacion = fechaCreacion;
+    }
+
+    public Integer getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(Integer idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getCedula() {
