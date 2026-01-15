@@ -1,6 +1,7 @@
 package com.example.practicaproyectofinalspringboot;
 
 import jakarta.persistence.Column;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
@@ -14,13 +15,15 @@ public class Facultad {
     private Integer idUsuarioDecano;
 
     @NotNull(message = "El nombre de la facultad es obligatorio")
+    @NotBlank(message = "El nombre de la facultad no puede estar vacia")
     @Size(max = 100, message = "El nombre de la facultad no debe exceder los 100 caracteres")
     @Column(nullable = false, length = 100)
     private String nombreFacultad;
 
     public Facultad() {}
 
-    public Facultad(Integer idUsuarioDecano, String nombreFacultad) {
+    public Facultad(Integer idFacultad, Integer idUsuarioDecano, String nombreFacultad) {
+        this.idFacultad = idFacultad;
         this.idUsuarioDecano = idUsuarioDecano;
         this.nombreFacultad = nombreFacultad;
     }

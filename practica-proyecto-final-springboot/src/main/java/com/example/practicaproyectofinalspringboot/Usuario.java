@@ -152,15 +152,16 @@ public class Usuario {
     @Override
     public String toString() {
         return "Usuario{" +
-                "cedula='" + cedula + '\n' +
-                "nombres='" + nombres + '\n' +
-                "apellidos='" + apellidos + '\n' +
-                "correo='" + correo + '\n' +
-                "telefono='" + telefono + '\n' +
-                "nombreUsuario='" + nombreUsuario + '\n' +
-                "credencialUsuario='" + credencialUsuario + '\n' +
-                "activo=" + activo + '\n' +
-                "fechaCreacion=" + fechaCreacion +
+                "idUsuario=" + idUsuario +
+                ", cedula='" + cedula + '\'' +
+                ", nombres='" + nombres + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", correo='" + correo + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", nombreUsuario='" + nombreUsuario + '\'' +
+                ", credencialUsuario='" + credencialUsuario + '\'' +
+                ", activo=" + activo +
+                ", fechaCreacion=" + fechaCreacion +
                 '}';
     }
 
