@@ -8,7 +8,6 @@ import jakarta.validation.constraints.Size;
 
 public class Facultad {
     private Integer idFacultad;
-
     @NotNull(message = "El ID del usuario decano es obligatorio")
     @Positive(message = "El ID del usuario decano debe ser un número positivo")
     @Column(nullable = false)
