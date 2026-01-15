@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>proyecto-spring-boot</artifactId>
+    <artifactId>practica-proyecto-final-springboot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>proyecto-spring-boot</name>
-    <description>proyecto-spring-boot</description>
+    <name>practica-proyecto-final-springboot</name>
+    <description>practica-proyecto-final-springboot</description>
     <url/>
     <licenses>
         <license/>
@@ -50,6 +50,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
     </dependencies>
 
